@@ -3,7 +3,18 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    user-select: none;
+}
+main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
 .container{
+    width: 100vw;
+    margin-top: auto;
+    margin-bottom: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,12 +26,12 @@
     width: 0rem;
     height: 0rem;
     opacity: 0;
-    background-color: rgb(21, 119, 16);
-    transition: all 1.2s ease;
+    background-color: rgb(133, 160, 22);
+    transition: all .4s ease;
 }
 .game{
     width: min-content;
-    filter: blur(2px);
+    filter: blur(0);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 3px;
@@ -31,23 +42,61 @@
     width: 5rem;
 }
 .result{
-    /* width: 10%; */
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .2s ease;
 }
 .resultimg{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.resultimg img{
+    width: 1rem;
+    transition: all .7s ease;
+}
 .result p{
-    font: 2em sans-serif;
+    color: blue;
+    font: 2rem sans-serif;
     font-weight: 800;
+    transform: translateY(500%);
+    transition: all .5s ease;
 }
 button{
     border-style: none;
     cursor: pointer;
+}
+.turntext{
+    position: absolute;
+    bottom: -45px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.turn{
+    position: absolute;
+    bottom: -50px;
+    width: 15.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.turnbutton{
+    padding: 6px 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.turnbutton img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+.box-shadow{
+    box-shadow: inset 0px -3px 2px 0px rgb(6, 169, 219);
+    box-shadow: outset 2px 2px grey;
 }
