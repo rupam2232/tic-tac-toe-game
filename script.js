@@ -5,6 +5,8 @@ const game = document.querySelector(".game")
 const result = document.querySelector(".result")
 const cross = document.querySelector(".cross")
 const circle = document.querySelector(".circle")
+const turntext = document.querySelector(".turntext")
+const turn = document.querySelector(".turn")
 setTimeout(() => {
     backgroundchange.style.height = "15.3rem"
     backgroundchange.style.width = "15.3rem"
@@ -153,6 +155,8 @@ function winnerchecker() {
 function forcross() {
     console.log("cross")
     game.style.filter = "blur(2px)"
+    turn.style.filter = "blur(2px)"
+    turntext.style.filter = "blur(2px)"
     result.style.opacity = "1"
     result.style.height = "15.3rem"
     result.style.width = "15.3rem"
@@ -170,6 +174,8 @@ function forcross() {
 function forcircle() {
     console.log("circle")
     game.style.filter = "blur(2px)"
+    turn.style.filter = "blur(2px)"
+    turntext.style.filter = "blur(2px)"
     result.style.opacity = "1"
     result.style.height = "15.3rem"
     result.style.width = "15.3rem"
@@ -187,6 +193,8 @@ function forcircle() {
 function tie() {
     console.log("tie")
     game.style.filter = "blur(2px)"
+    turn.style.filter = "blur(2px)"
+    turntext.style.filter = "blur(2px)"
     result.style.opacity = "1"
     result.style.height = "15.3rem"
     result.style.width = "15.3rem"
